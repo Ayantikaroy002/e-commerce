@@ -11,7 +11,7 @@ const Trending = () => {
             Explore the latest trends in our collection.
           </p>
           <div className="mx-28  grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className=" shadow bg-white flex flex-col ">
+            <div className=" bg-white flex flex-col ">
               <img
                 src="../trend1.avif"
                 alt="Trending item 1"

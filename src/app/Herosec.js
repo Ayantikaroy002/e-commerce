@@ -1,23 +1,26 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 const Herosec = () => {
   return (
     <>
-      <div className="relative h-screen w-full bg-cover " style={{ backgroundImage: "url('../first.avif')" }}>
+      <div className="relative h-screen bg-cover " style={{ backgroundImage: "url('../first.avif')" }}>
       <div className="absolute inset-0  "></div>
-      <nav class=" w-full text-white p-4 flex justify-between items-center z-10">
-            <div class="flex items-center">
+      <nav class=" w-full text-white flex justify-between items-center ">
+            <div class="flex items-center ml-6">
                 <a href="#" class="text-xl font-bold">FARADAY.SHOES</a>
                 <div class="ml-10 space-x-8  flex">
-                    <a href="#" class="hover:text-gray-300">Shop</a>
-                    <a href="#" class="hover:text-gray-300">Guarantee</a>
-                    <a href="#" class="hover:text-gray-300">Shipping & Returns</a>
-                    <a href="#" class="hover:text-gray-300">Blog</a>
-                    <a href="#" class="hover:text-gray-300">About</a>
+                   <Link href="/Men" > Men </Link>
+                    <Link href="/Women">Women</Link>
+                    <Link href="#">Women</Link>
+                    <Link href="#">Shipping & Returns</Link>
+                    <Link href="#">Blog</Link>
+                    <Link href="#">About</Link>
                 </div>
             </div>
             <div class="flex items-center">
-                <button class="mr-4 hover:text-gray-300 ">Menu</button>
+                <button class="mr-4">Menu</button>
                
             </div>
         </nav>
@@ -32,6 +35,27 @@ const Herosec = () => {
         <button className="px-6 py-2 bg-white text-black font-semibold">SHOP NOW</button>
       </div>
     </div>
+
+
+    <div className="py-7 bg-gray-100">
+      <div className="container flex justify-center space-x-10">
+        <div className="w-96 bg-cover h-[500px]" style={{ backgroundImage: "url('../women.jpg')" }}>
+          <div className="flex items-center justify-center h-full">
+            <h2 className="text-white text-3xl font-bold">Shop Women</h2>
+          </div>
+        </div>
+        <div className="w-96 bg-cover bg-center h-[500px]" style={{ backgroundImage: "url('../men.jpg')" }}>
+          <div className="flex items-center justify-center h-full">
+            <h2 className="text-white text-3xl font-bold">Shop Men</h2>
+          </div>
+        </div>
+        <div className="w-96 bg-cover bg-center h-[500px]" style={{ backgroundImage: "url('../kid.jpeg')" }}>
+          <div className="flex items-center justify-center h-full">
+            <h2 className="text-white text-3xl font-bold">Shop Kids</h2>
+          </div>
+        </div>
+      </div>
+    </div> 
     </>
   )
 }
