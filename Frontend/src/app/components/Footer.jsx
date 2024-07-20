@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
 
         <div className=" flex flex-col text-white absolute inset-0 justify-center items-center ">
-          <h1 class="flex text-2xl">
+          <h1 className="flex text-2xl">
             Put Your Hands First At Our <br/> Premium And LImited Products
           </h1>
           <span className=" pt-28 text-xs pb-3 ">

@@ -1,13 +1,15 @@
+"use client";
+import React from 'react';
+import Trending from "./components/Trending";
+import Style from "./components/Style";
 
-import Herosec from "./Herosec";
+import Journal from "./components/Journal";
 
-import Trending from "./Trending";
-import Style from "./Style";
+import Herosec from "./components/Herosec";
 
-import Journal from "./Journal";
-import Footer from "./Footer";
 
 export default function Home() {
+ 
   return (
     <>
     <div className="text-center text-xs text-white bg-[#3b9393] py-2"> FREE SHIPPING WORLDWIDE </div>  
@@ -17,7 +19,7 @@ export default function Home() {
       <Style/>
       
       <Journal/>
-      <Footer/>
+      
     </>
   );
 }
