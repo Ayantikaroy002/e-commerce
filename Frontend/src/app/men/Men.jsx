@@ -24,32 +24,34 @@ const Men = () => {
               RIGHT GEAR
             </h1>
           </div>
-          
+
           <Link href="/summer-collections" className=" flex items-center gap-3 font-semibold text-left">VIEW SUMMER COLLECTIONS <img className="w-4 h-4" src="../ArrowUpIcon.svg" />
           </Link>
- 
+
         </div>
 
         <div className="w-[40%] h-[740px] absolute top-0 bottom-auto left-auto right-0">
           <div className="w-[100vw] h-[100%] justify-end items-center flex absolute top-0 bottom-auto left-auto right-0 ">
-          <img className=" w-[40%] h-[740px] object-cover object-right-top max-w-full " src="../men.jpg" alt="mukul er chobi" />
+            <img className=" w-[40%] h-[740px] object-cover object-right-top max-w-full " src="../men.jpg" alt="mukul er chobi" />
           </div>
-          
+
           <div className="w-36 h-36 backdrop-blur-xl bg-[#cfb79a] rounded justify-center items-center flex absolute top-auto bottom-[-58px] left-[-82px] right-auto"> </div>
         </div>
 
       </div>
 
-      <section className="bg-[#e1dedb] h-[550px]">
-        <div className="mx-16 pt-[2rem]">
-          <div className="flex flex-row gap-3">
-            <div className=" w-[280px] h-[500px] relative bg-black rounded-md">
+      <section className="bg-[#e1dedb] h-[90vh] overflow-hidden">
+        <div className="h-[100%] mx-6 p-8 ">
+
+          <div className="h-[100%] flex flex-row items-center gap-2">
+
+            <div className=" w-[100%] h-[90%] relative bg-black rounded-md">
               <img
                 src="../trend1.avif"
                 alt=""
                 className="h-full transform opacity-20 transition hover:opacity-90 rounded-md"
               />
-              <div className="pt-8 absolute inset-0 ">
+              <div className="absolute z-10 top-[20%]">
                 <h1 className=" text-white text-right font-bold  text-4xl rotate-[270deg] mt-96 ml-52">
 
                   Hoodies
@@ -57,13 +59,13 @@ const Men = () => {
               </div>
             </div>
 
-            <div className=" w-[280px] h-[500px] relative bg-black mt-4  rounded-md">
+            <div className=" w-[100%] h-[90%] relative bg-black mt-4  rounded-md">
               <img
                 src="../trend1.avif"
                 alt=""
                 className="h-full opacity-60  rounded-md"
               />
-              <div className="pt-8 absolute inset-0 ">
+              <div className="absolute z-10 top-[20%]">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
                   Sweatshirts
@@ -71,13 +73,13 @@ const Men = () => {
               </div>
             </div>
 
-            <div className=" w-[280px] h-[500px] relative bg-black  rounded-md">
+            <div className=" w-[100%] h-[90%] relative bg-black  rounded-md">
               <img
                 src="../trend1.avif"
                 alt=""
                 className="h-full opacity-60  rounded-md"
               />
-              <div className="pt-8 absolute inset-0">
+              <div className="absolute z-10 top-[20%]">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
                   Shirts
@@ -85,13 +87,13 @@ const Men = () => {
               </div>
             </div>
 
-            <div className=" w-[280px] h-[500px] relative bg-black mt-4 rounded-md">
+            <div className=" w-[100%] h-[90%] relative bg-black mt-4 rounded-md">
               <img
                 src="../trend1.avif"
                 alt=""
                 className="h-full opacity-60  rounded-md"
               />
-              <div className="pt-8 absolute inset-0">
+              <div className="absolute z-10 top-[20%]">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
                   TShirts
@@ -99,19 +101,20 @@ const Men = () => {
               </div>
             </div>
 
-            <div className=" w-[280px] h-[500px] relative bg-black  rounded-md">
+            <div className=" w-[100%] h-[90%] relative bg-black  rounded-md">
               <img
                 src="../trend1.avif"
                 alt=""
                 className="h-full opacity-60  rounded-md"
               />
-              <div className="pt-8 absolute inset-0">
+              <div className="absolute z-10 top-[20%]">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
                   Jackets
                 </h1>
               </div>
             </div>
+
           </div>
         </div>
       </section>
