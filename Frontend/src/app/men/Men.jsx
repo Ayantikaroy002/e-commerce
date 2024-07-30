@@ -1,24 +1,47 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 const Men = () => {
   return (
     <>
-     <div className="flex flex-row bg-[#e1dedb] h-[600px] pb-6">
-           <div className="left flex flex-col items-baseline  mt-10  bg-[#e1dedb]">
-              <h1 className="text-7xl  ml-56 pr-20 py-14 font-semibold">
-              GET YOURSELF INTO THE RIGHT GEAR
-             </h1>
-             <p className=" mx-20 pl-5 text-left">VIEW SUMMER COLLECTIONS</p>
-           </div>
-          <div className="right w-full float-left pl-40 ">
-          <img className=" w-full h-[500px] mb-5 " src="../men copy.jpg" alt="" />
-          <div className="container h-32 w-32 bg-[#cfb79a] opacity-60 -mt-24 -ml-16"> </div>
+      <div className="flex flex-col bg-[#e1dedb] h-[90vh] relative overflow-hidden pt-[100px] pb-[100px] justify-center items-center">
+
+        <div className="left flex flex-col items-left gap-[5rem] w-[100%] relative z-10 mx-auto px-12 py-7 ">
+
+          <div className="text-9xl my-0 tracking-wider leading-none" >
+
+            <h1 className=" my-0 font-bold">
+              GET
+            </h1>
+            <h1 className="my-0 font-bold">
+              YOURSELF
+            </h1>
+            <h1 className="my-0 text-white font-bold">
+              INTO THE
+            </h1>
+            <h1 className="my-0 text-white font-bold">
+              RIGHT GEAR
+            </h1>
           </div>
           
+          <Link href="/summer-collections" className=" flex items-center gap-3 font-semibold text-left">VIEW SUMMER COLLECTIONS <img className="w-4 h-4" src="../ArrowUpIcon.svg" />
+          </Link>
+ 
+        </div>
+
+        <div className="w-[40%] h-[740px] absolute top-0 bottom-auto left-auto right-0">
+          <div className="w-[100vw] h-[100%] justify-end items-center flex absolute top-0 bottom-auto left-auto right-0 ">
+          <img className=" w-[40%] h-[740px] object-cover object-right-top max-w-full " src="../men.jpg" alt="mukul er chobi" />
+          </div>
+          
+          <div className="w-36 h-36 backdrop-blur-xl bg-[#cfb79a] rounded justify-center items-center flex absolute top-auto bottom-[-58px] left-[-82px] right-auto"> </div>
+        </div>
+
       </div>
 
       <section className="bg-[#e1dedb] h-[550px]">
-        <div className="mx-16">
+        <div className="mx-16 pt-[2rem]">
           <div className="flex flex-row gap-3">
             <div className=" w-[280px] h-[500px] relative bg-black rounded-md">
               <img
@@ -28,7 +51,7 @@ const Men = () => {
               />
               <div className="pt-8 absolute inset-0 ">
                 <h1 className=" text-white text-right font-bold  text-4xl rotate-[270deg] mt-96 ml-52">
-                 
+
                   Hoodies
                 </h1>
               </div>
@@ -42,7 +65,7 @@ const Men = () => {
               />
               <div className="pt-8 absolute inset-0 ">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
-                  
+
                   Sweatshirts
                 </h1>
               </div>
@@ -56,7 +79,7 @@ const Men = () => {
               />
               <div className="pt-8 absolute inset-0">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
-                 
+
                   Shirts
                 </h1>
               </div>
@@ -70,7 +93,7 @@ const Men = () => {
               />
               <div className="pt-8 absolute inset-0">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
-                  
+
                   TShirts
                 </h1>
               </div>
@@ -84,7 +107,7 @@ const Men = () => {
               />
               <div className="pt-8 absolute inset-0">
                 <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
-                 
+
                   Jackets
                 </h1>
               </div>
@@ -188,7 +211,7 @@ const Men = () => {
           </div>
         </div>
       </div>
-      
+
     </>
   );
 };

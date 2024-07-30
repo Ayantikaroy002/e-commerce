@@ -8,7 +8,7 @@ const handler = async(req, res) => {
          await Users.save()  
          res.status(200).json({success:'valid'})   
          
-        
+       
     }else{
         res.status(400).json({error: 'Invalid'})
     }

@@ -1,90 +1,140 @@
 import React from "react";
+import Link from 'next/link';
+import Image from 'next/image';
+
 
 const Trending = () => {
   return (
     <>
-      <div className="py-10 bg-[#f1d3bc]">
-        <div className="container text-center">
-          <p className="text-[80px] font-bold">SEASON'S</p>
-          <p className="text-[80px] text-white font-bold">TRENDING</p>
-          <p className="text-lg mb-12">
-            Explore the latest trends in our collection.
-          </p>
-          <div className="mx-28  grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className=" bg-white flex flex-col ">
-              <img
-                src="../trend1.avif"
-                alt="Trending item 1"
-                className="w-full h-[80%] object-cover"
-              />
-              <div className=" mt-4">
-              <div className="flex ">
-                <h3 className="text-lg mr-40 ml-4 font-semibold">Product 1</h3>
-                <img
-                    src="../cart.png"
-                    alt="Cart icon"
-                    className="w-6 h-6"
-                  />
-                </div>
-                <p className="mr-56">$50.00</p>
-                
-              </div>
+
+
+      <div className="cloth py-10 flex justify-center bg-[#f1d3bc] ">
+        <div className="container flex flex-col justify-around p-12">
+
+          <div className="text-center leading-none ">
+            <p className="text-[100px] pl-16 text-left special-text tracking-wider font-bold">NEWEST
+            </p>
+            <p className="text-[100px] pr-16 text-right special-text text-white tracking-wider font-bold">PRODUCTS</p>
+            <div className="flex text-left justify-between my-6" >
+              <p className="text-xl  max-w-[40rem]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porta feugiat etiam aliquet aliquet tellus vel. Et maecenas id bibendum sit. Augue nulla tortor faucibus nunc. Urna massa mattis faucibus velit sed volutpat sodales. Quis at mi amet, ipsum.
+              </p>
+              <Link href="/signin" className="mr-4 special-text font-semibold tracking-wider text-[1rem]">VIEW ALL</Link>
+              {/* arrow svg needed  */}
             </div>
-            <div className=" bg-white flex flex-col ">
-              <img
-                src="../trend2.jpg"
-                alt="Trending item 2"
-                className="w-full h-[80%] object-cover"
-              />
-              <div className=" mt-4">
-              <div className="flex ">
-                <h3 className="text-lg mr-40 ml-4 font-semibold">Product 2</h3>
-                <img
-                    src="../cart.png"
-                    alt="Cart icon"
-                    className="w-6 h-6"
-                  />
-                </div>
-                <p className="mr-56">$60.00</p>
-              </div>
-            </div>
-            <div className=" bg-white flex flex-col  ">
-              <img
-                src="../trend 3.jpeg"
-                alt="Trending item 3"
-                className="w-full h-[80%] object-cover"
-              />
-               <div className=" mt-4">
-              <div className="flex ">
-                <h3 className="text-lg mr-40 ml-4 font-semibold">Product 3</h3>
-                <img
-                    src="../cart.png"
-                    alt="Cart icon"
-                    className="w-6 h-6"
-                  />
-                </div>
-                <p className="mr-56">$70.00</p>
-              </div>
-            </div>
-            <div className=" bg-white flex flex-col ">
-              <img
-                src="../trend4.jpg"
-                alt="Trending item 4"
-                className="w-full h-[80%] object-cover"
-              />
-               <div className=" mt-4">
-              <div className="flex ">
-                <h3 className="text-lg mr-40 ml-4 font-semibold">Product 4</h3>
-                <img
-                    src="../cart.png"
-                    alt="Cart icon"
-                    className="w-6 h-6"
-                  />
-                </div>
-                <p className="mr-56">$80.00</p>
-              </div>
-            </div>
+
           </div>
+
+          {/* product grid here */}
+          <div className="  grid h-[30rem] grid-cols-2 md:grid-cols-4 gap-6">
+
+            {/* product 1 */}
+            <div className="bg-white flex flex-col overflow-hidden rounded-md justify-between">
+              <div className=" relative align-middle w-[100%] h-[80%]">
+                <Image
+                  src="/trend1.avif" // Replace with the path to your image file
+                  alt="First Image"
+                  layout="fill" 
+                  objectFit="cover"
+                  max-width="100%"
+                />
+              </div>
+
+              <div className="flex justify-between items-center m-4">
+                <div >
+                  <h3 className="text-lg  font-semibold">Product 1</h3>
+                  <p>$50.00</p>
+                </div>
+                <Link href="/signin">
+                  <img
+                    src="../cart.png"
+                    alt="Cart icon"
+                    width={"35px"}
+                  /></Link>
+              </div>
+            </div>
+            {/* product 2 */}
+            <div className="bg-white flex flex-col overflow-hidden rounded-md justify-between">
+              <div className=" relative align-middle w-[100%] h-[80%]">
+                <Image
+                  src="/trend2.jpg" // Replace with the path to your image file
+                  alt="First Image"
+                  layout="fill"
+                  objectFit="cover"
+                  max-width="100%"
+                />
+              </div>
+
+              <div className="flex justify-between items-center m-4">
+                <div >
+                  <h3 className="text-lg  font-semibold">Product 2</h3>
+                  <p>$50.00</p>
+                </div>
+                <Link href="/signin">
+                  <img
+                    src="../cart.png"
+                    alt="Cart icon"
+                    width={"35px"}
+                  />
+                </Link>
+
+              </div>
+            </div>
+            {/* product 3 */}
+            <div className="bg-white flex flex-col overflow-hidden rounded-md justify-between">
+              <div className=" relative align-middle w-[100%] h-[80%]">
+                <Image
+                  src="/trend3.jpg" // Replace with the path to your image file
+                  alt="First Image"
+                  layout="fill"
+                  objectFit="cover"
+                  max-width="100%"
+                />
+              </div>
+
+              <div className="flex justify-between items-center m-4">
+                <div >
+                  <h3 className="text-lg  font-semibold">Product 3</h3>
+                  <p>$50.00</p>
+                </div>
+                <Link href="/signin">
+                  <img
+                    src="../cart.png"
+                    alt="Cart icon"
+                    width={"35px"}
+                  />
+                </Link>
+              </div>
+            </div>
+            {/* product 4 */}
+            <div className="bg-white flex flex-col overflow-hidden rounded-md justify-between">
+              <div className=" relative align-middle w-[100%] h-[80%]">
+                <Image
+                  src="/trend4.jpg" // Replace with the path to your image file
+                  alt="First Image"
+                  layout="fill"
+                  objectFit="cover"
+                  max-width="100%"
+                />
+              </div>
+
+              <div className="flex justify-between items-center m-4">
+                <div >
+                  <h3 className="text-lg  font-semibold">Product 4</h3>
+                  <p>$50.00</p>
+                </div>
+                <Link href="/signin">
+                  <img
+                    src="../cart.png"
+                    alt="Cart icon"
+                    width={"35px"}
+                  />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </>

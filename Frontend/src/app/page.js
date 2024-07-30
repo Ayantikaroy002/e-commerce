@@ -12,7 +12,8 @@ export default function Home() {
  
   return (
     <>
-    <div className="text-center text-xs text-white bg-[#3b9393] py-2"> FREE SHIPPING WORLDWIDE </div>  
+    <div className="text-center tracking-widest text-sm text-white bg-[#3b9393] py-[.5rem]"> FREE SHIPPING WORLDWIDE </div>  
+      
       <Herosec/>
       
       <Trending/>

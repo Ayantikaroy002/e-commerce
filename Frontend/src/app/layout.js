@@ -1,8 +1,13 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { Cabin } from "next/font/google";
+import {Archivo} from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import Navbar from "./components/navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const cabin = Cabin({ subsets: ["latin"] });
+const archivo = Archivo({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +18,12 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+
+        <body className={cabin.className}>
+          <Navbar/>
+          <h2 className={archivo.className} ></h2>
+          <p className={cabin.className} ></p>
+          
        <>{children} </> 
         <Footer/>
         </body>

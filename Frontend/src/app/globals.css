@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+  /* Use the Archivo font for specific elements */
+  .special-text {
+    font-family: 'Archivo expanded';
+  }
+  
