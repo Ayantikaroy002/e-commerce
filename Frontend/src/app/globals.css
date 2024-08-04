@@ -1,9 +1,9 @@
+ /* styles/globals.css */
+
+ @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-  /* Use the Archivo font for specific elements */
-  .special-text {
-    font-family: 'Archivo expanded';
-  }
-  

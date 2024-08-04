@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
 const Men = () => {
   return (
     <>
@@ -9,18 +10,18 @@ const Men = () => {
 
         <div className="left flex flex-col items-left gap-[5rem] w-[100%] relative z-10 mx-auto px-12 py-7 ">
 
-          <div className="text-9xl my-0 tracking-wider leading-none" >
+          <div className="my-0 tracking-wider leading-none" >
 
-            <h1 className=" my-0 font-bold">
+            <h1 className="text-9xl my-0 font-bold">
               GET
             </h1>
-            <h1 className="my-0 font-bold">
+            <h1 className="text-9xl my-0 font-bold">
               YOURSELF
             </h1>
-            <h1 className="my-0 text-white font-bold">
+            <h1 className="text-9xl my-0 text-white font-bold">
               INTO THE
             </h1>
-            <h1 className="my-0 text-white font-bold">
+            <h1 className="text-9xl my-0 text-white font-bold">
               RIGHT GEAR
             </h1>
           </div>
@@ -43,80 +44,137 @@ const Men = () => {
       <section className="bg-[#e1dedb] h-[90vh] overflow-hidden">
         <div className="h-[100%] mx-6 p-8 ">
 
-          <div className="h-[100%] flex flex-row items-center gap-2">
+          <div className="h-[100%] relative grid grid-flow-col gap-2 items-stretch">
 
-            <div className=" w-[100%] h-[90%] relative bg-black rounded-md">
+            <a href="#" className="group relative block bg-black">
               <img
-                src="../trend1.avif"
                 alt=""
-                className="h-full transform opacity-20 transition hover:opacity-90 rounded-md"
+                src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+                className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
               />
-              <div className="absolute z-10 top-[20%]">
-                <h1 className=" text-white text-right font-bold  text-4xl rotate-[270deg] mt-96 ml-52">
 
-                  Hoodies
-                </h1>
+              <div className="relative h-full p-4 sm:p-6 lg:p-8">
+                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
+
+                <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                <div className="mt-32 sm:mt-48 lg:mt-64">
+                  <div
+                    className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    <p className="text-sm text-white">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
+                      quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div className=" w-[100%] h-[90%] relative bg-black mt-4  rounded-md">
+            <a href="#" className="group relative block bg-black">
               <img
-                src="../trend1.avif"
                 alt=""
-                className="h-full opacity-60  rounded-md"
+                src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+                className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
               />
-              <div className="absolute z-10 top-[20%]">
-                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
-                  Sweatshirts
-                </h1>
+              <div className="relative p-4 sm:p-6 lg:p-8">
+                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
+
+                <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                <div className="mt-32 sm:mt-48 lg:mt-64">
+                  <div
+                    className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    <p className="text-sm text-white">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
+                      quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div className=" w-[100%] h-[90%] relative bg-black  rounded-md">
+            <a href="#" className="group relative block bg-black">
               <img
-                src="../trend1.avif"
                 alt=""
-                className="h-full opacity-60  rounded-md"
+                src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+                className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
               />
-              <div className="absolute z-10 top-[20%]">
-                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
-                  Shirts
-                </h1>
+              <div className="relative p-4 sm:p-6 lg:p-8">
+                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
+
+                <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                <div className="mt-32 sm:mt-48 lg:mt-64">
+                  <div
+                    className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    <p className="text-sm text-white">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
+                      quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div className=" w-[100%] h-[90%] relative bg-black mt-4 rounded-md">
+            <a href="#" className="group relative block bg-black">
               <img
-                src="../trend1.avif"
                 alt=""
-                className="h-full opacity-60  rounded-md"
+                src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+                className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
               />
-              <div className="absolute z-10 top-[20%]">
-                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
-                  TShirts
-                </h1>
+              <div className="relative p-4 sm:p-6 lg:p-8">
+                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
+
+                <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                <div className="mt-32 sm:mt-48 lg:mt-64">
+                  <div
+                    className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    <p className="text-sm text-white">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
+                      quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div className=" w-[100%] h-[90%] relative bg-black  rounded-md">
+            <a href="#" className="group relative block bg-black">
               <img
-                src="../trend1.avif"
                 alt=""
-                className="h-full opacity-60  rounded-md"
+                src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+                className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
               />
-              <div className="absolute z-10 top-[20%]">
-                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
 
-                  Jackets
-                </h1>
+              <div className="relative p-4 sm:p-6 lg:p-8">
+                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">Developer</p>
+
+                <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+                <div className="mt-32 sm:mt-48 lg:mt-64">
+                  <div
+                    className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                  >
+                    <p className="text-sm text-white">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
+                      quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
 
           </div>
+
         </div>
+
       </section>
 
       <div className="cloth py-10 flex justify-center bg-[#e1dedb]">
@@ -249,22 +307,27 @@ const Men = () => {
         </div>
       </div>
 
-      <div className="py-8 bg-[#e1dedb]">
-        <h1 className="ml-32 text-6xl "> Features of our Products </h1>
 
-        <div className="flex flex-row mx-32 bg-black my-14 h-[400px]">
-          <div className="left flex flex-col mt-10 ">
-            <h1 className="text-3xl px-6 font-bold text-white">
-              GET YOURSELF INTO THE RIGHT GEAR
-            </h1>
-            <p className="w-3/4 pl-7 pt-56 text-white">
-              Many women are afraid to try something new at work because they
-              think that that they will not be taken seriously.
-            </p>
+      <div className="cloth py-10 flex justify-center bg-[#e1dedb]">
+        <div className="container flex flex-col justify-around p-12">
+
+          <h1 className="ml-32 text-6xl "> Features of our Products </h1>
+
+          <div className="flex flex-row justify-stretch bg-black my-14 h-[400px]">
+            <div className="left flex flex-col mt-10 ">
+              <h1 className="text-3xl px-6 font-bold text-white">
+                GET YOURSELF INTO THE RIGHT GEAR
+              </h1>
+              <p className="w-3/4 pl-7 pt-56 text-white">
+                Many women are afraid to try something new at work because they
+                think that that they will not be taken seriously.
+              </p>
+            </div>
+            <div className="right ">
+              <img className="h-[400px] " src="../men.jpg" alt="" />
+            </div>
           </div>
-          <div className="right  w-[49%]">
-            <img className="h-[400px] " src="../men.jpg" alt="" />
-          </div>
+
         </div>
       </div>
 
