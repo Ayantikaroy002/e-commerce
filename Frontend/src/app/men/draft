@@ -1,0 +1,70 @@
+   <!-- <div className=" w-[100%] h-[90%] relative bg-black rounded-md">
+              <img
+                src="../trend1.avif"
+                alt=""
+                className="h-full transform opacity-20 transition hover:opacity-90 rounded-md"
+              />
+              <div className="absolute z-10">
+                <h1 className=" text-white text-right font-bold  text-4xl rotate-[270deg]">
+
+                  Hoodies
+                </h1>
+              </div>
+
+            </div>
+
+            <div className=" w-[100%] h-[90%] relative bg-black mt-4  rounded-md">
+              <img
+                src="../trend1.avif"
+                alt=""
+                className="h-full opacity-60  rounded-md"
+              />
+              <div className="absolute z-10 top-[20%]">
+                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
+
+                  Sweatshirts
+                </h1>
+              </div>
+            </div>
+
+            <div className=" w-[100%] h-[90%] relative bg-black  rounded-md">
+              <img
+                src="../trend1.avif"
+                alt=""
+                className="h-full opacity-60  rounded-md"
+              />
+              <div className="absolute z-10 top-[20%]">
+                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
+
+                  Shirts
+                </h1>
+              </div>
+            </div>
+
+            <div className=" w-[100%] h-[90%] relative bg-black mt-4 rounded-md">
+              <img
+                src="../trend1.avif"
+                alt=""
+                className="h-full opacity-60  rounded-md"
+              />
+              <div className="absolute z-10 top-[20%]">
+                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
+
+                  TShirts
+                </h1>
+              </div>
+            </div>
+
+            <div className=" w-[100%] h-[90%] relative bg-black  rounded-md">
+              <img
+                src="../trend1.avif"
+                alt=""
+                className="h-full opacity-60  rounded-md"
+              />
+              <div className="absolute z-10 top-[20%]">
+                <h1 className=" text-white text-right font-bold text-4xl rotate-[270deg] mt-96 ml-52">
+
+                  Jackets
+                </h1>
+              </div>
+            </div> -->
