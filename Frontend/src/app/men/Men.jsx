@@ -222,6 +222,7 @@ const Men = () => {
                   /></Link>
               </div>
             </div>
+
             {/* product 2 */}
             <div className="bg-white flex flex-col overflow-hidden rounded-md justify-between">
               <div className=" relative align-middle w-[100%] h-[80%]">
@@ -236,9 +237,10 @@ const Men = () => {
 
               <div className="flex justify-between items-center m-4">
                 <div >
-                  <h3 className="text-lg  font-semibold">Product 2</h3>
+                  <h3 className="text-lg font-semibold">Product 2</h3>
                   <p>$50.00</p>
                 </div>
+              
                 <Link href="/signin">
                   <img
                     src="../cart.png"
@@ -246,9 +248,9 @@ const Men = () => {
                     width={"35px"}
                   />
                 </Link>
-
               </div>
             </div>
+
             {/* product 3 */}
             <div className="bg-white flex flex-col overflow-hidden rounded-md justify-between">
               <div className=" relative align-middle w-[100%] h-[80%]">
