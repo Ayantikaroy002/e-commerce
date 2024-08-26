@@ -40,7 +40,7 @@ const Men = () => {
         </div>
 
       </div>
-
+      
       <section className="bg-[#e1dedb] h-[90vh] overflow-hidden">
         <div className="h-[100%] mx-6 p-8 ">
 
