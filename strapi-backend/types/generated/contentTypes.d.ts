@@ -362,6 +362,42 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiMensProductMensProduct extends Schema.CollectionType {
+  collectionName: 'mens_products';
+  info: {
+    singularName: 'mens-product';
+    pluralName: 'mens-products';
+    displayName: 'Mens Product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Product_name: Attribute.String;
+    Product_description: Attribute.Blocks;
+    Product_image: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Product_price: Attribute.Decimal;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mens-product.mens-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mens-product.mens-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -828,6 +864,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::mens-product.mens-product': ApiMensProductMensProduct;
       'api::product.product': ApiProductProduct;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
