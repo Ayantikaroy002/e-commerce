@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "mens_products",
+  "collectionName": "womens_products",
   "info": {
-    "singularName": "mens-product",
-    "pluralName": "mens-products",
-    "displayName": "Mens Product",
+    "singularName": "womens-product",
+    "pluralName": "womens-products",
+    "displayName": "Womens Product",
     "description": ""
   },
   "options": {
@@ -14,9 +14,7 @@
   "attributes": {
     "Product_name": {
       "type": "string",
-      "required": true,
-      "maxLength": 71,
-      "minLength": 3
+      "required": true
     },
     "Product_description": {
       "type": "blocks"
@@ -24,7 +22,7 @@
     "Product_image": {
       "type": "media",
       "multiple": true,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -33,29 +31,33 @@
       ]
     },
     "Product_price": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "Category": {
       "type": "enumeration",
       "enum": [
-        "Hoodies",
-        "Sweatshirts",
-        "Shirts",
         "T-shirts",
-        "Jackets"
+        "Tops",
+        "Dresses",
+        "Jackets",
+        "Sweatshirts"
       ],
       "required": true
     },
     "Color": {
       "type": "enumeration",
       "enum": [
+        "Pink",
         "Blue",
-        "Green",
-        "Red",
         "Yellow",
-        "Black",
+        "Red",
+        "Green",
         "White",
-        "Grey"
+        "Black",
+        "Grey",
+        "Magenta",
+        "Purple"
       ]
     },
     "AvailableQty": {

@@ -1,11 +1,11 @@
 "use client";
 import React from 'react';
-import Trending from "./components/Trending";
-import Style from "./components/Style";
+import Trending from "./_components/Trending";
+import Style from "./_components/Style";
 
-import Journal from "./components/Journal";
+import Journal from "./_components/Journal";
 
-import Herosec from "./components/Herosec";
+import Herosec from "./_components/Herosec";
 
 
 export default function Home() {

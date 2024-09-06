@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "mens_products",
+  "collectionName": "kids_products",
   "info": {
-    "singularName": "mens-product",
-    "pluralName": "mens-products",
-    "displayName": "Mens Product",
+    "singularName": "kids-product",
+    "pluralName": "kids-products",
+    "displayName": "Kids Product",
     "description": ""
   },
   "options": {
@@ -24,7 +24,7 @@
     "Product_image": {
       "type": "media",
       "multiple": true,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -33,16 +33,17 @@
       ]
     },
     "Product_price": {
+      "required": true,
       "type": "decimal"
     },
     "Category": {
       "type": "enumeration",
       "enum": [
-        "Hoodies",
-        "Sweatshirts",
         "Shirts",
         "T-shirts",
-        "Jackets"
+        "Frocks",
+        "Hoodies",
+        "Tops"
       ],
       "required": true
     },
@@ -50,17 +51,20 @@
       "type": "enumeration",
       "enum": [
         "Blue",
-        "Green",
-        "Red",
         "Yellow",
-        "Black",
+        "Pink",
+        "Purple",
+        "Red",
+        "Green",
         "White",
-        "Grey"
-      ]
+        "Black",
+        "Grey",
+        "Magenda"
+      ],
+      "required": true
     },
     "AvailableQty": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "Size": {
       "type": "string",

@@ -362,72 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiMensProductMensProduct extends Schema.CollectionType {
-  collectionName: 'mens_products';
-  info: {
-    singularName: 'mens-product';
-    pluralName: 'mens-products';
-    displayName: 'Mens Product';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Product_name: Attribute.String;
-    Product_description: Attribute.Blocks;
-    Product_image: Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    Product_price: Attribute.Decimal;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::mens-product.mens-product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::mens-product.mens-product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiProductProduct extends Schema.CollectionType {
-  collectionName: 'products';
-  info: {
-    singularName: 'product';
-    pluralName: 'products';
-    displayName: 'Product';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    ProductName: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::product.product',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -854,6 +788,216 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiKidsProductKidsProduct extends Schema.CollectionType {
+  collectionName: 'kids_products';
+  info: {
+    singularName: 'kids-product';
+    pluralName: 'kids-products';
+    displayName: 'Kids Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Product_name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 3;
+        maxLength: 71;
+      }>;
+    Product_description: Attribute.Blocks;
+    Product_image: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Attribute.Required;
+    Product_price: Attribute.Decimal & Attribute.Required;
+    Category: Attribute.Enumeration<
+      ['Shirts', 'T-shirts', 'Frocks', 'Hoodies', 'Tops']
+    > &
+      Attribute.Required;
+    Color: Attribute.Enumeration<
+      [
+        'Blue',
+        'Yellow',
+        'Pink',
+        'Purple',
+        'Red',
+        'Green',
+        'White',
+        'Black',
+        'Grey',
+        'Magenda'
+      ]
+    > &
+      Attribute.Required;
+    AvailableQty: Attribute.Integer;
+    Size: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::kids-product.kids-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::kids-product.kids-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMensProductMensProduct extends Schema.CollectionType {
+  collectionName: 'mens_products';
+  info: {
+    singularName: 'mens-product';
+    pluralName: 'mens-products';
+    displayName: 'Mens Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Product_name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 3;
+        maxLength: 71;
+      }>;
+    Product_description: Attribute.Blocks;
+    Product_image: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Product_price: Attribute.Decimal;
+    Category: Attribute.Enumeration<
+      ['Hoodies', 'Sweatshirts', 'Shirts', 'T-shirts', 'Jackets']
+    > &
+      Attribute.Required;
+    Color: Attribute.Enumeration<
+      ['Blue', 'Green', 'Red', 'Yellow', 'Black', 'White', 'Grey']
+    >;
+    AvailableQty: Attribute.Integer & Attribute.Required;
+    Size: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mens-product.mens-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mens-product.mens-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOrderOrder extends Schema.CollectionType {
+  collectionName: 'orders';
+  info: {
+    singularName: 'order';
+    pluralName: 'orders';
+    displayName: 'Order';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    User_Email: Attribute.Email & Attribute.Required;
+    Order_Id: Attribute.UID & Attribute.Required;
+    Payment_info: Attribute.JSON;
+    Products: Attribute.JSON & Attribute.Required;
+    Address: Attribute.Text & Attribute.Required;
+    Username: Attribute.String & Attribute.Required;
+    TransactionId: Attribute.UID & Attribute.Required;
+    Amount: Attribute.Decimal & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWomensProductWomensProduct extends Schema.CollectionType {
+  collectionName: 'womens_products';
+  info: {
+    singularName: 'womens-product';
+    pluralName: 'womens-products';
+    displayName: 'Womens Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Product_name: Attribute.String & Attribute.Required;
+    Product_description: Attribute.Blocks;
+    Product_image: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Attribute.Required;
+    Product_price: Attribute.Decimal & Attribute.Required;
+    Category: Attribute.Enumeration<
+      ['T-shirts', 'Tops', 'Dresses', 'Jackets', 'Sweatshirts']
+    > &
+      Attribute.Required;
+    Color: Attribute.Enumeration<
+      [
+        'Pink',
+        'Blue',
+        'Yellow',
+        'Red',
+        'Green',
+        'White',
+        'Black',
+        'Grey',
+        'Magenta',
+        'Purple'
+      ]
+    >;
+    AvailableQty: Attribute.Integer & Attribute.Required;
+    Size: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::womens-product.womens-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::womens-product.womens-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -864,8 +1008,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::mens-product.mens-product': ApiMensProductMensProduct;
-      'api::product.product': ApiProductProduct;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -874,6 +1016,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::kids-product.kids-product': ApiKidsProductKidsProduct;
+      'api::mens-product.mens-product': ApiMensProductMensProduct;
+      'api::order.order': ApiOrderOrder;
+      'api::womens-product.womens-product': ApiWomensProductWomensProduct;
     }
   }
 }

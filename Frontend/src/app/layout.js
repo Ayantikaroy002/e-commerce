@@ -2,8 +2,8 @@
 // import { Cabin } from "next/font/google";
 import {Archivo} from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/navbar";
+import Footer from "./_components/Footer";
+import Navbar from "./_components/navbar";
 
 
 const cabin = Archivo({ subsets: ["latin"] });
