@@ -8,9 +8,7 @@ const WomenCategory = async ({params}) => {
     console.log("API Response:", productList);
   return (
     <div>
-        product category list {params.categoryName}
       <Items productList={productList} categoryName={params.categoryName}/> 
-     
     </div>
   )
 }

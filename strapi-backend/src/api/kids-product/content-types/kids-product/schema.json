@@ -47,28 +47,25 @@
       ],
       "required": true
     },
-    "Color": {
-      "type": "enumeration",
-      "enum": [
-        "Blue",
-        "Yellow",
-        "Pink",
-        "Purple",
-        "Red",
-        "Green",
-        "White",
-        "Black",
-        "Grey",
-        "Magenda"
-      ],
-      "required": true
-    },
     "AvailableQty": {
       "type": "integer"
     },
     "Size": {
       "type": "string",
       "required": true
+    },
+    "Color": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "string",
+      "default": "kids"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "kids_products"
     }
   }
 }

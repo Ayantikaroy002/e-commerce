@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Items = ({ productList, categoryName }) => {
   console.log("API Response:", productList);
@@ -27,7 +28,7 @@ const Items = ({ productList, categoryName }) => {
         </p>
         <div className="mx-28 grid grid-cols-2 md:grid-cols-4 gap-6">
           {productList.map((product) => (
-            <div key={product.id} className="bg-white flex flex-col">
+            <Link href={`/${product.attributes.Type}-id/${product.id}`} key={product.id} className="bg-white flex flex-col">
               <img
                 src={product.attributes.Product_image.data?.[0].attributes.url}
                 className="w-full h-[80%] object-cover"
@@ -47,7 +48,7 @@ const Items = ({ productList, categoryName }) => {
                   ${product.attributes.Product_price}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

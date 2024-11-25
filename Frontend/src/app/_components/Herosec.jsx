@@ -1,18 +1,30 @@
 "use-client";
-import React from 'react';
+import { React, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from './navbar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Herosec = () => {
-
+  useEffect(() => {
+    const jwt = sessionStorage.getItem('jwt');
+    
+    if(jwt){
+      toast.success("You are succesfully Signed in");
+      toast("You are succesfully Signed in");
+    }
+  }, [])
+   //<ToastContainer hideProgressBar/>
   // ref={mainRef}
   return (
     <>
-
+     
     
 
       <div className="relative flex h-[100vh] overflow-hidden pt-56 pb-40 flex-col justify-end items-stretch bg-black ">
+      <ToastContainer/>
+      
         <div className="relative z-10 flex justify-between items-end mx-[3vw] px-14 text-white">
           <div className="max-w-3xl mr-14 flex flex-col items-start justify-end ">
             <div className="flex gap-2 items-center mb-4">

@@ -771,6 +771,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    cart: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::cart.cart'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -784,6 +789,51 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCartCart extends Schema.CollectionType {
+  collectionName: 'carts';
+  info: {
+    singularName: 'cart';
+    pluralName: 'carts';
+    displayName: 'Cart';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Quantity: Attribute.Integer & Attribute.Required;
+    Amount: Attribute.Decimal & Attribute.Required;
+    kids_products: Attribute.Relation<
+      'api::cart.cart',
+      'oneToMany',
+      'api::kids-product.kids-product'
+    >;
+    mens_products: Attribute.Relation<
+      'api::cart.cart',
+      'oneToMany',
+      'api::mens-product.mens-product'
+    >;
+    womens_products: Attribute.Relation<
+      'api::cart.cart',
+      'oneToMany',
+      'api::womens-product.womens-product'
+    >;
+    users_permissions_user: Attribute.Relation<
+      'api::cart.cart',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    userId: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::cart.cart', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::cart.cart', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -817,23 +867,15 @@ export interface ApiKidsProductKidsProduct extends Schema.CollectionType {
       ['Shirts', 'T-shirts', 'Frocks', 'Hoodies', 'Tops']
     > &
       Attribute.Required;
-    Color: Attribute.Enumeration<
-      [
-        'Blue',
-        'Yellow',
-        'Pink',
-        'Purple',
-        'Red',
-        'Green',
-        'White',
-        'Black',
-        'Grey',
-        'Magenda'
-      ]
-    > &
-      Attribute.Required;
     AvailableQty: Attribute.Integer;
     Size: Attribute.String & Attribute.Required;
+    Color: Attribute.String;
+    Type: Attribute.String & Attribute.DefaultTo<'kids'>;
+    cart: Attribute.Relation<
+      'api::kids-product.kids-product',
+      'manyToOne',
+      'api::cart.cart'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -874,17 +916,22 @@ export interface ApiMensProductMensProduct extends Schema.CollectionType {
     Product_image: Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Attribute.Required;
     Product_price: Attribute.Decimal;
     Category: Attribute.Enumeration<
       ['Hoodies', 'Sweatshirts', 'Shirts', 'T-shirts', 'Jackets']
     > &
       Attribute.Required;
-    Color: Attribute.Enumeration<
-      ['Blue', 'Green', 'Red', 'Yellow', 'Black', 'White', 'Grey']
-    >;
     AvailableQty: Attribute.Integer & Attribute.Required;
     Size: Attribute.String & Attribute.Required;
+    Color: Attribute.String & Attribute.Required;
+    Type: Attribute.String & Attribute.DefaultTo<'men'>;
+    cart: Attribute.Relation<
+      'api::mens-product.mens-product',
+      'manyToOne',
+      'api::cart.cart'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -964,22 +1011,15 @@ export interface ApiWomensProductWomensProduct extends Schema.CollectionType {
       ['T-shirts', 'Tops', 'Dresses', 'Jackets', 'Sweatshirts']
     > &
       Attribute.Required;
-    Color: Attribute.Enumeration<
-      [
-        'Pink',
-        'Blue',
-        'Yellow',
-        'Red',
-        'Green',
-        'White',
-        'Black',
-        'Grey',
-        'Magenta',
-        'Purple'
-      ]
-    >;
     AvailableQty: Attribute.Integer & Attribute.Required;
     Size: Attribute.String & Attribute.Required;
+    Color: Attribute.String & Attribute.Required;
+    Type: Attribute.String & Attribute.DefaultTo<'womens'>;
+    cart: Attribute.Relation<
+      'api::womens-product.womens-product',
+      'manyToOne',
+      'api::cart.cart'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1016,6 +1056,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::cart.cart': ApiCartCart;
       'api::kids-product.kids-product': ApiKidsProductKidsProduct;
       'api::mens-product.mens-product': ApiMensProductMensProduct;
       'api::order.order': ApiOrderOrder;

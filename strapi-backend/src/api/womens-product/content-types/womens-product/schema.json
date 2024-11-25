@@ -45,21 +45,6 @@
       ],
       "required": true
     },
-    "Color": {
-      "type": "enumeration",
-      "enum": [
-        "Pink",
-        "Blue",
-        "Yellow",
-        "Red",
-        "Green",
-        "White",
-        "Black",
-        "Grey",
-        "Magenta",
-        "Purple"
-      ]
-    },
     "AvailableQty": {
       "type": "integer",
       "required": true
@@ -67,6 +52,20 @@
     "Size": {
       "type": "string",
       "required": true
+    },
+    "Color": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "string",
+      "default": "womens"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "womens_products"
     }
   }
 }

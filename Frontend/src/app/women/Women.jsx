@@ -1,12 +1,12 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Women = () => {
+ 
   return (
     <>
-      <div className="flex flex-col bg-[#e1dedb] h-[90vh] relative overflow-hidden pt-[100px] pb-[100px] justify-center items-center">
+      <div className="flex flex-col bg-[#e1dedb] h-[90vh] relative overflow-hidden pt-[250px] pb-[100px] justify-center items-center">
 
         <div className="left flex flex-col items-left gap-[5rem] w-[100%] relative z-10 mx-auto px-12 py-7 ">
 
@@ -46,7 +46,7 @@ const Women = () => {
 
           <div className="h-[100%] relative grid grid-flow-col gap-2 items-stretch">
 
-            <Link href="/women-category/T-shirts" className="group relative block bg-black">
+            <Link href='/women-category/T-shirts' className="group relative block bg-black">
               <img
                 alt=""
                 src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"

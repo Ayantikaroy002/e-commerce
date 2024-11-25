@@ -1,6 +1,7 @@
 
 import GlobalApi from '@/app/_utils/GlobalApi'
 import Items from '@/app/items/Items'
+import Product from '@/app/product/Product'
 import React from 'react'
 
 const KidCategory = async ({params}) => {
@@ -8,8 +9,7 @@ const KidCategory = async ({params}) => {
     //console.log("API Response:", productList);
   return (
     <div>
-      <Items productList={productList} categoryName={params.categoryName}/> 
-     
+      <Items productList={productList} categoryName={params.categoryName}/>
     </div>
   )
 }

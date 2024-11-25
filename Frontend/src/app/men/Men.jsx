@@ -6,7 +6,7 @@ import Image from "next/image";
 const Men = () => {
   return (
     <>
-      <div className="flex flex-col bg-[#e1dedb] h-[90vh] relative overflow-hidden pt-[100px] pb-[100px] justify-center items-center">
+      <div className="flex flex-col bg-[#e1dedb] h-[90vh] relative overflow-hidden pt-[250px] pb-[100px] justify-center items-center">
 
         <div className="left flex flex-col items-left gap-[5rem] w-[100%] relative z-10 mx-auto px-12 py-7 ">
 
